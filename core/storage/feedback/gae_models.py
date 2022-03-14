@@ -903,7 +903,7 @@ class UnsentFeedbackEmailModel(base_models.BaseModel):
         return cls.get_by_id(user_id) is not None
 
     @classmethod
-    def get_message(cls, message: str) -> None:
+    def get_message(cls, message: str) -> str:
         """Returns the passed message.
 
         Args:
