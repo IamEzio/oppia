@@ -901,3 +901,15 @@ class UnsentFeedbackEmailModel(base_models.BaseModel):
             bool. Whether the model for user_id exists.
         """
         return cls.get_by_id(user_id) is not None
+
+    @classmethod
+    def get_message(cls, message: str) -> None:
+        """Returns the passed message.
+
+        Args:
+            message: str. The message to be returned.
+
+        Returns:
+            str. The passed message.
+        """
+        return message
