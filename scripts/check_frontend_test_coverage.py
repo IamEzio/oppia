@@ -204,7 +204,8 @@ def check_coverage_changes():
         print('Frontend Coverage Checks Not Passed.')
         print('------------------------------------')
         print('')
-        print('\033[1m' + 'core/templates/pages/about-page/about-page-root' +
+        print(
+            '\033[1m' + 'core/templates/pages/about-page/about-page-root' +
             '.component.ts' + '\033[0m' + ' is not fully tested. Make sure' +
             ' it is fully covered before pushing the code.')
         # Logging.error(errors).
