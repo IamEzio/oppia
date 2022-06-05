@@ -40,6 +40,7 @@ module.exports = function(config) {
       // script. This generated file is a combination of all the spec files
       // since Karma is unable to run tests on multiple files due to some
       // unknown reason.
+      // Remove combined-tests.spec.ts below and add individual spec files here.
       'core/templates/combined-tests.spec.ts',
       {
         pattern: 'assets/**',
@@ -100,6 +101,21 @@ module.exports = function(config) {
       fixWebpackSourcePaths: true,
       'report-config': {
         html: { outdir: 'html' }
+      },
+      thresholds: {
+        emitWarning: true,
+        global: {
+          statements: 100,
+          branches: 100,
+          functions: 100,
+          lines: 100,
+        },
+        each: {
+          statements: 100,
+          branches: 100,
+          functions: 100,
+          lines: 100,
+        }
       }
     },
     autoWatch: true,
