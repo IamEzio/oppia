@@ -340,7 +340,7 @@ def main(args: Optional[List[str]] = None) -> int:
     print(stderr.decode('utf-8'))
     if process.returncode == 0:
         print('Mypy type checks successful.')
-    else:
+    elif process.returncode == 1:
         print(
             'Mypy type checks unsuccessful. Please fix the errors. '
             'For more information, visit: '
